@@ -8,9 +8,13 @@ import { Link } from 'react-router-dom';
 import ChannapatnaToy from '../components/ChannapatnaToy';
 import ChannapatnaMaker from '../components/ChannapatnaMaker';
 import WarliArt from '../components/WarliArt';
+import BluePotteryMaker from '../components/BluePotteryMaker';
 import WarliMaker from '../components/WarliMaker';
 import KolamArt from '../components/KolamArt';
 import KolamMaker from '../components/KolamMaker';
+import BluePottery from '../components/BluePottery';
+import MadhubaniArt from '../components/MadhubaniArt';
+// import UserArtifactGenerator from '../components/UserArtifactGenerator';
 
 const Loader = () => (
   <Html center><div className="text-yellow-500 text-xs font-bold animate-pulse">Loading...</div></Html>
@@ -81,9 +85,30 @@ const Archive = () => {
            <KolamMaker />
         </ArchiveItem>
 
+        {/* ... existing items ... */}
+
+{/* JAIPUR BLUE */}
+<ArchiveItem title="Jaipur Blue Pottery" subtitle="Rajasthan • Ceramic" color="bg-blue-600">
+    <BluePottery />
+</ArchiveItem>
+
+{/* MADHUBANI */}
+<ArchiveItem title="Madhubani Art" subtitle="Bihar • Folk Art" color="bg-orange-400">
+    <MadhubaniArt />
+</ArchiveItem>
+
+
+<ArchiveItem title="Process: Glazing" subtitle="Interactive Demo" color="bg-green-500" isDemo desc="Witness how raw quartz dough is transformed into glass-like pottery.">
+    <BluePotteryMaker />
+</ArchiveItem>
+
       </div>
     </div>
   );
 };
+
+
+// ... inside the grid ...
+
 
 export default Archive;
